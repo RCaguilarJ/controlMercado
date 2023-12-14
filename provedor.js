@@ -2,8 +2,8 @@ let inventario = [];
 
 function agregarProducto() {
   const producto = document.getElementById("productoInput").value;
-  //   const proveedor = document.getElementById("proveedorInput").value;
-  //   const precio = document.getElementById("precioInput").value;
+  const proveedor = document.getElementById("proveedorInput").value;
+  const precio = document.getElementById("precioInput").value;
   const peso = document.getElementById("pesoInput").value;
   const bultos = parseInt(document.getElementById("bultosInput").value);
 
