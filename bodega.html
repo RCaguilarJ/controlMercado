@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bodega.css" />
+    <title>Inventario Bodega</title>
+  </head>
+  <body>
+    <header>
+      <h1>Inventario de Productos</h1>
+      <!-- <img src="./assets/logo.webp" alt="logo" /> -->
+    </header>
+
+    <main class="content">
+      <h2>Agregar un producto al inventario:</h2>
+      <form id="formularioInventario">
+        <div class="info">
+          <p class="producto">Producto: <input type="text" id="productoInput" /></p>
+          <p class="proveedor">Proveedor: <input type="text" id="proveedorInput" /></p>
+          <p class="precio">Precio $ prov: <input type="text" id="precioInput" /></p>
+          <p class="peso">Peso (kr) neto: <input type="text" id="pesoInput" /></p>
+          <p class="cantidad">
+            Bultos:
+            <input type="number" id="bultosInput" min="1" value="1" />
+          </p>
+        </div>
+        <button class="agregar" type="button" onclick="agregarProducto()">
+          Agregar Producto
+        </button>
+      </form>
+      <button class="quitar" onclick="quitarProducto()">Quitar Producto</button>
+      <div id="inventario">
+        <table>
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Proveedor</th>
+              <th>Precio prov</th>
+              <th>Peso neto</th>
+              <th>Bultos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Aquí se mostrarán las filas de datos del inventario -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="./bodega.js"></script>
+  </body>
+</html>
