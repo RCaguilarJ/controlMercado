@@ -145,18 +145,186 @@
     }
   
     /* Añade más estilos según tus necesidades para dispositivos móviles */
+    header {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      min-width: 320px;
+      height: 100px;
+      text-align: center;
+      background: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
+      
+    }
   }
+
+  @media only screen and (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+
+    header img {
   
-  /* Resto del CSS original */
-  header {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    min-width: 320px;
-    height: 100px;
-    text-align: center;
-    background: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
-    
+        width: 100px;
+        height: 100px;
+      
+        align-self: center;
+      }
+      
+    table {
+      font-size: 14px;
+    }
+  
+    th, td {
+      padding: 8px;
+      font-size: 15px;
+      font-weight: normal; /* Deshace el efecto negrita en dispositivos móviles */
+    }
+  
+    .agregar, .quitar {
+      font-size: 16px;
+    }
+  
+    /* Añade más estilos según tus necesidades para dispositivos móviles */
+    header {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      min-width: 320px;
+      height: 100px;
+      text-align: center;
+      background: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
+      
+    }
   }
+  @media only screen and (max-width: 768px) {
+    /* Tus estilos para dispositivos con un ancho de pantalla hasta 768px */
+    body {
+      font-size: 14px;
+    }
+
+    header img {
+  
+        width: 100px;
+        height: 100px;
+      
+        align-self: center;
+      }
+      
+    table {
+      font-size: 14px;
+    }
+  
+    th, td {
+      padding: 8px;
+      font-size: 15px;
+      font-weight: normal; /* Deshace el efecto negrita en dispositivos móviles */
+    }
+  
+    .agregar, .quitar {
+      font-size: 16px;
+    }
+  
+    /* Añade más estilos según tus necesidades para dispositivos móviles */
+    header {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      min-width: 320px;
+      height: 100px;
+      text-align: center;
+      background: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
+      
+    }
+  }
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
+    body {
+      font-size: 14px;
+    }
+
+    header img {
+  
+        width: 100px;
+        height: 100px;
+      
+        align-self: center;
+      }
+      
+    table {
+      font-size: 14px;
+    }
+  
+    th, td {
+      padding: 8px;
+      font-size: 15px;
+      font-weight: normal; /* Deshace el efecto negrita en dispositivos móviles */
+    }
+  
+    .agregar, .quitar {
+      font-size: 16px;
+    }
+  
+    /* Añade más estilos según tus necesidades para dispositivos móviles */
+    header {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      min-width: 320px;
+      height: 100px;
+      text-align: center;
+      background: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
+      
+    }
+  }
+  @media only screen and (max-width: 1024px) and (orientation: landscape) {
+    /* Tus estilos para dispositivos con ancho de pantalla hasta 1024px en orientación horizontal */
+    body {
+      font-size: 14px;
+    }
+
+    header img {
+  
+        width: 100px;
+        height: 100px;
+      
+        align-self: center;
+      }
+      
+    table {
+      font-size: 14px;
+    }
+  
+    th, td {
+      padding: 8px;
+      font-size: 15px;
+      font-weight: normal; /* Deshace el efecto negrita en dispositivos móviles */
+    }
+  
+    .agregar, .quitar {
+      font-size: 16px;
+    }
+  
+    /* Añade más estilos según tus necesidades para dispositivos móviles */
+    header {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      min-width: 320px;
+      height: 100px;
+      text-align: center;
+      background: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
+      
+    }
+  }
+
+
+  

@@ -245,3 +245,70 @@ a {
     }
 
 }
+
+@media only screen and (max-width: 480px) {
+  .header--button {
+    padding: 10ox;
+    text-align: center;
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    font-weight: 300;
+    font-size: 2.2rem;
+    margin: 5px auto; /* Centro verticalmente y agrego margen */
+    text-align: center; /* Centrar el texto dentro del enlace */
+}
+  header img {
+      width: 125px;
+    
+      margin-top: 20px;
+      align-self: center; 
+    }
+}
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  .header--button {
+    padding: 10ox;
+    text-align: center;
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    font-weight: 300;
+    font-size: 2.2rem;
+    margin: 5px auto; /* Centro verticalmente y agrego margen */
+    text-align: center; /* Centrar el texto dentro del enlace */
+}
+  header img {
+      width: 125px;
+    
+      margin-top: 20px;
+      align-self: center; 
+    }
+}
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+  .header--button {
+    padding: 10ox;
+    text-align: center;
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    font-weight: 300;
+    font-size: 2.2rem;
+    margin: 5px auto; /* Centro verticalmente y agrego margen */
+    text-align: center; /* Centrar el texto dentro del enlace */
+}
+  header img {
+      width: 125px;
+    
+      margin-top: 20px;
+      align-self: center; 
+    }
+}
