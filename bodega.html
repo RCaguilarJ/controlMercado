@@ -29,6 +29,13 @@
         </button>
       </form>
       <button class="quitar" onclick="quitarProducto()">Quitar Producto</button>
+      <h2>Buscar Producto:</h2>
+      <input
+        type="text"
+        id="buscarInput"
+        oninput="filtrarProductos()"
+        placeholder="Buscar producto"
+      />
       <div id="inventario">
         <table>
           <thead>
@@ -38,12 +45,15 @@
               <th>Bultos</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="inventarioBody">
             <!-- Aquí se mostrarán las filas de datos del inventario -->
           </tbody>
         </table>
       </div>
     </main>
+    <footer>
+      <button class="reiniciar" onclick="reiniciarLista()">Reiniciar Lista</button>
+    </footer>
 
     <script src="./bodega.js"></script>
   </body>
