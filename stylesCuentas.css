@@ -228,3 +228,25 @@
         font-size: 1rem;
       } */
   }
+  @media only screen and (max-width: 768px) {
+    /* Tus estilos para dispositivos con un ancho de pantalla hasta 768px */
+    .shopping-notice.show {
+      width: 50%;
+    }
+  }
+
+  
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
+    /* Tus estilos para dispositivos con ancho de pantalla hasta 768px en orientación vertical */
+    .shopping-notice.show {
+      width: 50%;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) and (orientation: landscape) {
+    /* Tus estilos para dispositivos con ancho de pantalla hasta 1024px en orientación horizontal */
+    .shopping-notice.show {
+      width: 50%;
+    }
+  }
+  
