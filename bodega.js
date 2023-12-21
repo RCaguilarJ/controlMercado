@@ -1,8 +1,8 @@
-let inventario = [];
+// let inventarioBodega = [];
 
 document.addEventListener("DOMContentLoaded", () => {
-  inventario = JSON.parse(localStorage.getItem("inventario")) || [];
-  actualizarInventario();
+  inventarioBodega = JSON.parse(localStorage.getItem("inventarioBodega")) || [];
+  actualizarInventarioBodega();
 });
 
 function agregarProducto() {
@@ -10,16 +10,18 @@ function agregarProducto() {
   const peso = document.getElementById("pesoInput").value;
   const bultos = parseInt(document.getElementById("bultosInput").value);
 
-  const productoExistente = inventario.find((p) => p.producto === producto);
+  const productoExistente = inventarioBodega.find(
+    (p) => p.producto === producto
+  );
 
   if (productoExistente) {
     productoExistente.bultos += bultos;
   } else {
-    inventario.push({ producto, peso, bultos });
+    inventarioBodega.push({ producto, peso, bultos });
   }
 
   limpiarInputs();
-  actualizarInventario();
+  actualizarInventarioBodega();
   guardarDatos();
 }
 
@@ -28,7 +30,9 @@ function quitarProducto() {
   const bultosQuitar = parseInt(document.getElementById("bultosInput").value);
   const pesoQuitar = parseFloat(document.getElementById("pesoInput").value);
 
-  const productoExistente = inventario.find((p) => p.producto === producto);
+  const productoExistente = inventarioBodega.find(
+    (p) => p.producto === producto
+  );
 
   if (productoExistente && productoExistente.bultos >= bultosQuitar) {
     productoExistente.bultos -= bultosQuitar;
@@ -39,7 +43,7 @@ function quitarProducto() {
       productoExistente.peso = 0;
     }
 
-    actualizarInventario();
+    actualizarInventarioBodega();
     guardarDatos();
   } else {
     alert("No hay suficientes bultos del producto para quitar.");
@@ -52,11 +56,11 @@ function limpiarInputs() {
   document.getElementById("bultosInput").value = 1;
 }
 
-function actualizarInventario() {
+function actualizarInventarioBodega() {
   const inventarioTableBody = document.querySelector("#inventario tbody");
   inventarioTableBody.innerHTML = "";
 
-  inventario.forEach((producto) => {
+  inventarioBodega.forEach((producto) => {
     const fila = document.createElement("tr");
     fila.innerHTML = `
       <td>${producto.producto}</td>
@@ -67,19 +71,16 @@ function actualizarInventario() {
   });
 }
 
-function guardarDatos() {
-  localStorage.setItem("inventario", JSON.stringify(inventario));
-}
 function reiniciarLista() {
-  inventario = [];
-  actualizarInventario();
+  inventarioBodega = [];
+  actualizarInventarioBodega();
   guardarDatos();
 }
 
 function filtrarProductos() {
   const buscarInput = document.getElementById("buscarInput");
   const filtro = buscarInput.value.toLowerCase();
-  const inventarioFiltrado = inventario.filter((producto) =>
+  const inventarioFiltrado = inventarioBodega.filter((producto) =>
     producto.producto.toLowerCase().includes(filtro)
   );
 
@@ -95,4 +96,8 @@ function filtrarProductos() {
     `;
     inventarioTableBody.appendChild(fila);
   });
+}
+
+function guardarDatos() {
+  localStorage.setItem("inventarioBodega", JSON.stringify(inventarioBodega));
 }
