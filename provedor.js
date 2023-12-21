@@ -1,4 +1,9 @@
-let inventario = [];
+// let inventario = [];
+
+document.addEventListener("DOMContentLoaded", () => {
+  inventario = JSON.parse(localStorage.getItem("inventario")) || [];
+  actualizarInventario();
+});
 
 function agregarProducto() {
   const producto = document.getElementById("productoInput").value;
@@ -19,6 +24,7 @@ function agregarProducto() {
 
   limpiarInputs();
   actualizarInventario();
+  guardarDatos();
 }
 
 function quitarProducto() {
@@ -32,6 +38,7 @@ function quitarProducto() {
   if (productoExistente && productoExistente.bultos > 0) {
     productoExistente.bultos--;
     actualizarInventario();
+    guardarDatos(); // Guardar después de quitar
   }
 }
 
@@ -58,4 +65,12 @@ function actualizarInventario() {
     `;
     inventarioTableBody.appendChild(fila);
   });
+}
+function reiniciarLista() {
+  inventario = [];
+  actualizarInventario();
+  guardarDatos();
+}
+function guardarDatos() {
+  localStorage.setItem("inventario", JSON.stringify(inventario));
 }

@@ -23,22 +23,6 @@ function agregarProducto() {
   guardarDatos();
 }
 
-// function quitarProducto() {
-//   const producto = document.getElementById("productoInput").value;
-//   const bultosQuitar = parseInt(document.getElementById("bultosInput").value);
-//   const pesoQuitar = parseFloat(document.getElementById("pesoInput").value);
-
-//   const productoExistente = inventario.find((p) => p.producto === producto);
-
-//   if (productoExistente && productoExistente.bultos >= bultosQuitar) {
-//     productoExistente.bultos -= bultosQuitar;
-//     productoExistente.peso -= pesoQuitar * bultosQuitar;
-//     actualizarInventario();
-//     guardarDatos();
-//   } else {
-//     alert("No hay suficientes bultos del producto para quitar.");
-//   }
-// }
 function quitarProducto() {
   const producto = document.getElementById("productoInput").value;
   const bultosQuitar = parseInt(document.getElementById("bultosInput").value);
