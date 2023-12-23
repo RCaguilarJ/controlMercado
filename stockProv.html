@@ -32,6 +32,12 @@
       </form>
       <button class="quitar" onclick="quitarProducto()">Quitar Producto</button>
       <div id="inventario">
+        <input
+        type="text"
+        id="buscarInput"
+        oninput="filtrarProductos()"
+        placeholder="Buscar producto"
+      />
         <table>
           <thead>
             <tr>

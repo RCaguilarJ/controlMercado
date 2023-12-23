@@ -1,10 +1,14 @@
-// let inventario = [];
+let inventario = [];
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   inventario = JSON.parse(localStorage.getItem("inventario")) || [];
+//   actualizarInventario();
+// });
 document.addEventListener("DOMContentLoaded", () => {
-  inventario = JSON.parse(localStorage.getItem("inventario")) || [];
-  actualizarInventario();
+  inventarioProveedores =
+    JSON.parse(localStorage.getItem("inventarioProveedores")) || [];
+  actualizarInventarioProveedores();
 });
-
 function agregarProducto() {
   const producto = document.getElementById("productoInput").value;
   const proveedor = document.getElementById("proveedorInput").value;
@@ -70,7 +74,4 @@ function reiniciarLista() {
   inventario = [];
   actualizarInventario();
   guardarDatos();
-}
-function guardarDatos() {
-  localStorage.setItem("inventario", JSON.stringify(inventario));
 }
