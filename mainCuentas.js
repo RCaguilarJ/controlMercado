@@ -5,7 +5,7 @@ const clearButtons = document.querySelectorAll("[data-clear]");
 
 document.addEventListener("DOMContentLoaded", initialize);
 
-//Aqui inicia la app
+// Aquí inicia la app
 
 function initialize() {
   loadItems();
@@ -26,32 +26,32 @@ function initialize() {
 function saveItems() {
   const listItems = shoppingList.querySelectorAll("li");
 
-  const shoppingItems = [];
+  const items = [];
   listItems.forEach(function (listItem) {
     const id = listItem.getAttribute("data-id");
     const name = listItem.querySelector(".item-name").textContent;
     const completed = listItem.hasAttribute("data-completed");
 
-    shoppingItems.push({ id, name, completed });
+    items.push({ id, name, completed });
   });
 
-  localStorage.setItem("shoppingItems", JSON.stringify(shoppingItems));
+  localStorage.setItem("items", JSON.stringify(items));
 }
 
 function loadItems() {
-  const shoppingItems = JSON.parse(localStorage.getItem("shoppingItems")) || [];
+  const items = JSON.parse(localStorage.getItem("items")) || [];
 
   shoppingList.innerHTML = "";
 
-  shoppingItems.forEach(function (shoppingItem) {
-    const li = createListItem(shoppingItem);
+  items.forEach(function (item) {
+    const li = createListItem(item);
 
     shoppingList.appendChild(li);
   });
 }
 
-function createListItem(shoppingItem) {
-  const { id, name, completed } = shoppingItem;
+function createListItem(item) {
+  const { id, name, completed } = item;
 
   // checkbox
   const input = document.createElement("input");
